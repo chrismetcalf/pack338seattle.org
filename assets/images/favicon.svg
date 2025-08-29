@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Background circle -->
+  <circle cx="16" cy="16" r="15" fill="#1e3a8a" stroke="#3b82f6" stroke-width="1"/>
+  
+  <!-- Tent shape -->
+  <path d="M8 24 L16 8 L24 24 Z" fill="#f59e0b" stroke="#d97706" stroke-width="0.5"/>
+  
+  <!-- Tent door -->
+  <rect x="14" y="20" width="4" height="4" fill="#1e3a8a" rx="0.5"/>
+  
+  <!-- Campfire -->
+  <circle cx="16" cy="26" r="2" fill="#ef4444"/>
+  <circle cx="16" cy="26" r="1.5" fill="#f59e0b"/>
+  <circle cx="16" cy="26" r="1" fill="#fbbf24"/>
+</svg>
