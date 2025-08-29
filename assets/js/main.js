@@ -201,7 +201,7 @@ function showEventError(errorMessage) {
             <i class="fas fa-info-circle me-2"></i>
             <strong>Events Temporarily Unavailable</strong>
             <br><small class="text-muted">Our calendar feed is having a moment</small>
-            <br><small class="text-muted">Check our Groups.io group below for current events</small>
+            <br><small class="text-muted">Check our <a href="https://pack338.groups.io/g/all/calendar" target="_blank" class="text-white">Groups.io calendar</a> for current events</small>
         </div>
     `;
 }
