@@ -1,7 +1,7 @@
 title: Cub Scout Pack 338 Seattle
 description: Join Cub Scout Pack 338 in Seattle, WA! Open to kids of any gender from Kindergarten through 5th grade.
-url: "https://chrismetcalf.github.io"
-baseurl: "/pack338seattle.org"
+url: "https://pack338seattle.org"
+baseurl: ""
 
 # Build settings
 markdown: kramdown
