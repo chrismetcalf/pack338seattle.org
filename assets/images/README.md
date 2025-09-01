@@ -38,3 +38,4 @@ This directory contains images and icons for the Pack 338 website.
 - Use descriptive filenames (e.g., `pack-camping-trip-2024.jpg`)
 - Consider creating different sizes for responsive design
 - Keep file sizes under 500KB for optimal performance
+
