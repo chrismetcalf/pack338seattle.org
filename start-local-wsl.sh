@@ -42,8 +42,8 @@ if [ $? -eq 0 ]; then
     echo "   Press Ctrl+C to stop the server"
     echo ""
     
-    # Start Jekyll with WSL-friendly host configuration
-    bundle exec jekyll serve --host 0.0.0.0 --livereload
+    # Start Jekyll with localhost configuration
+    bundle exec jekyll serve --host localhost --livereload
 else
     echo "❌ Failed to install dependencies. Please check the error above."
     exit 1
