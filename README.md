@@ -202,7 +202,7 @@ To contribute to the website:
 
 For questions about the website or Pack 338:
 
-- **Email**: [all+owner@pack338.groups.io](mailto:all+owner@pack338.groups.io)
+- **Email**: [leadership@pack338seattle.org](mailto:leadership@pack338seattle.org)
 - **Website**: [pack338seattle.org](https://pack338seattle.org)
 - **Location**: Our Lady of the Lake Catholic School, 3520 NE 89th St, Seattle, WA 98115
 
