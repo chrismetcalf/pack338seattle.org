@@ -1,5 +1,72 @@
 /* Custom CSS for Pack 338 Website */
 
+/* Announcement Bar */
+.announcement-bar {
+    background: linear-gradient(135deg, #fed7aa 0%, #fdba74 50%, #fb923c 100%);
+    color: #7c2d12;
+    padding: 12px 0;
+    border-bottom: 1px solid #fb923c;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 56px; /* Position directly against the navbar with no gap */
+    left: 0;
+    right: 0;
+    z-index: 1029; /* Just below navbar z-index */
+}
+
+.announcement-content {
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.announcement-link {
+    color: #dc2626;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.announcement-link:hover {
+    color: #b91c1c;
+    border-bottom-color: #b91c1c;
+    text-decoration: none;
+}
+
+.announcement-btn {
+    border-color: #7c2d12;
+    color: #7c2d12;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.announcement-btn:hover {
+    background-color: #7c2d12;
+    color: white;
+    border-color: #7c2d12;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(124, 45, 18, 0.2);
+}
+
+@media (max-width: 768px) {
+    .announcement-bar {
+        padding: 12px 0;
+    }
+    
+    .announcement-content {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+    
+    .announcement-btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
 /* Global Styles */
 :root {
     --primary-color: #1e3a8a;
@@ -45,6 +112,7 @@ body {
     align-items: center;
     position: relative;
     overflow: hidden;
+    padding-top: 140px; /* Account for navbar (76px) + announcement bar (~64px) */
 }
 
 /* Hero title styling to prevent wrapping */
@@ -76,15 +144,7 @@ body {
     z-index: 2;
 }
 
-/* Enhanced hero section with image */
-.hero-section {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-}
+/* Enhanced hero section with image - styles are now combined above */
 
 .hero-section::before {
     content: '';
@@ -308,7 +368,7 @@ footer a:hover {
 @media (max-width: 768px) {
     .hero-section {
         min-height: 60vh;
-        padding: 60px 0;
+        padding: 120px 0 60px 0; /* Account for navbar + announcement bar on mobile */
     }
     
     /* Optimize image for mobile */
