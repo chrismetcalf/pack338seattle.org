@@ -112,7 +112,7 @@ body {
     align-items: center;
     position: relative;
     overflow: hidden;
-    padding-top: 140px; /* Account for navbar (76px) + announcement bar (~64px) */
+    padding-top: 80px; /* Account for navbar */
 }
 
 /* Hero title styling to prevent wrapping */
@@ -368,7 +368,7 @@ footer a:hover {
 @media (max-width: 768px) {
     .hero-section {
         min-height: 60vh;
-        padding: 120px 0 60px 0; /* Account for navbar + announcement bar on mobile */
+        padding: 80px 0 60px 0; /* Account for navbar on mobile */
     }
     
     /* Optimize image for mobile */
