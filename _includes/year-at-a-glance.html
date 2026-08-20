@@ -1,0 +1,92 @@
+{% comment %}
+The pack year, month by month, from _data/year.yml.
+
+Renders as "a typical year" while year.tentative is true, so proposed dates
+aren't read as commitments. Flip `tentative: false` in the data file once the
+calendar is confirmed.
+{% endcomment %}
+<section id="year" class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <h2 class="section-title text-center mb-3">A Year in Pack {{ site.data.pack.short_name | remove: 'Pack ' }}</h2>
+                <p class="text-center text-muted-dark mb-5">
+                    {% if site.data.year.tentative %}
+                    Here's the shape of a typical year with us.
+                    {% if site.data.year.spotlight %}Later dates{% else %}Exact dates for {{ site.data.year.season }}{% endif %}
+                    go out on the mailing list as they're confirmed.
+                    {% else %}
+                    Our {{ site.data.year.season }} program, month by month.
+                    {% endif %}
+                </p>
+
+                {%- comment -%}
+                Count the spotlight's still-upcoming events first. Everything
+                below keys off that: the box only renders while it has something
+                to show, and its month is only hidden from the grid while the box
+                is visible — so once the dates pass, this reverts to a plain
+                ten-month grid on its own.
+                {%- endcomment -%}
+                {%- assign sp = site.data.year.spotlight -%}
+                {%- assign now = site.time | date: '%s' | plus: 0 -%}
+                {%- assign sp_upcoming = 0 -%}
+                {%- if sp -%}
+                  {%- for e in sp.events -%}
+                    {%- assign starts = e.date | date: '%s' | plus: 0 -%}
+                    {%- if starts >= now -%}{%- assign sp_upcoming = sp_upcoming | plus: 1 -%}{%- endif -%}
+                  {%- endfor -%}
+                {%- endif -%}
+
+                {%- if sp_upcoming > 0 %}
+                <div class="year-card year-spotlight p-4 mb-4">
+                    <div class="year-month">{{ sp.month }}</div>
+                    <div class="year-theme">{{ sp.intro }}</div>
+                    <ul class="year-highlights">
+                        {%- for e in sp.events -%}
+                        {%- assign starts = e.date | date: '%s' | plus: 0 -%}
+                        {%- if starts >= now %}
+                        <li>
+                            <strong>{{ e.date | date: "%A, %B %-d" }}</strong> &mdash; {{ e.name }}.
+                            {{ e.detail }}
+                            {%- if e.time or e.place %}
+                            <span class="year-spotlight-where">
+                                {%- if e.time %}{{ e.time }}{% endif -%}
+                                {%- if e.time and e.place %}, {% endif -%}
+                                {%- if e.place %}{{ e.place }}{% endif -%}
+                            </span>
+                            {%- endif %}
+                        </li>
+                        {%- endif -%}
+                        {%- endfor %}
+                    </ul>
+                </div>
+                {%- endif %}
+
+                <div class="row g-3">
+                    {% for entry in site.data.year.months %}
+                    {%- if sp_upcoming > 0 and entry.month == sp.month %}{% continue %}{% endif %}
+                    <div class="col-md-6 col-lg-4">
+                        <div class="year-card h-100 p-4">
+                            <div class="year-month">{{ entry.month }}</div>
+                            <div class="year-theme">{{ entry.theme }}</div>
+                            <ul class="year-highlights">
+                                {% for highlight in entry.highlights %}
+                                <li>{{ highlight }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <p class="text-center mt-4 mb-0">
+                    <small class="text-muted-dark">
+                        Den and all-pack meetings are usually Wednesdays at 6:30 PM. Weekend outings
+                        run once or twice a month &mdash; check the calendar for dates.
+                        Campouts and outings are family events, so a grown-up comes along.
+                    </small>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

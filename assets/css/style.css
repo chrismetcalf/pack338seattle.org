@@ -128,6 +128,9 @@ body {
     }
 }
 
+/* Hero photo. Sits behind a dark overlay at 40% opacity, so it tolerates heavy
+   compression. WebP is served where supported, JPEG everywhere else, and phones
+   get an 800px variant instead of the full-size image. */
 .hero-section::before {
     content: '';
     position: absolute;
@@ -136,25 +139,16 @@ body {
     right: 0;
     bottom: 0;
     background: url('../images/fire_pit.jpg') center center/cover no-repeat;
+    background-image: image-set(
+        url('../images/fire_pit.webp') type('image/webp'),
+        url('../images/fire_pit.jpg') type('image/jpeg')
+    );
     opacity: 0.4;
 }
 
 .hero-section .container {
     position: relative;
     z-index: 2;
-}
-
-/* Enhanced hero section with image - styles are now combined above */
-
-.hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('../images/fire_pit.jpg') center center/cover no-repeat;
-    opacity: 0.4;
 }
 
 /* Add a dark overlay for better text readability */
@@ -371,10 +365,15 @@ footer a:hover {
         padding: 80px 0 60px 0; /* Account for navbar on mobile */
     }
     
-    /* Optimize image for mobile */
+    /* Optimize image for mobile: 800px variant instead of the full-size hero */
     .hero-section::before {
         background-position: center center;
         background-size: cover;
+        background-image: url('../images/fire_pit-800.jpg');
+        background-image: image-set(
+            url('../images/fire_pit-800.webp') type('image/webp'),
+            url('../images/fire_pit-800.jpg') type('image/jpeg')
+        );
     }
     
     .hero-section h1 {
@@ -534,9 +533,197 @@ html {
     margin-bottom: 10px;
 }
 
-.event-error .text-muted {
-    color: rgba(255, 255, 255, 0.7) !important;
+/* Bootstrap's .text-muted (#6c757d) is unreadable on the blue Join section.
+   Scope the override to the whole widget so every state — loading, empty,
+   timeout, error — stays legible. */
+.upcoming-events .text-muted {
+    color: rgba(255, 255, 255, 0.85) !important;
     line-height: 1.4;
+}
+
+/* Helper text on the blue signup page. Bootstrap's .text-white-50 only reaches
+   ~3.8:1 against --primary-color, below AA for small text. */
+.signup-note {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* Groups.io embedded signup form.
+   Was duplicated as an inline <style> in both index.html and signup.html;
+   lives here once now and is rendered by _includes/signup-form.html. */
+#groupsio_embed_signup {
+    background: #fff;
+    clear: left;
+    font: 14px Helvetica, Arial, sans-serif;
+}
+
+#groupsio_embed_signup input {
+    border: 1px solid #999;
+    -webkit-appearance: none;
+}
+
+#groupsio_embed_signup label {
+    display: block;
+    font-size: 16px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+#groupsio_embed_signup .email {
+    display: block;
+    padding: 8px 0;
+    margin: 0 4% 10px 0;
+    text-indent: 5px;
+    width: 58%;
+    min-width: 130px;
+}
+
+#groupsio_embed_signup .button {
+    width: 25%;
+    margin: 0 0 10px 0;
+    min-width: 90px;
+    background-image: linear-gradient(to bottom, #337ab7 0, #265a88 100%);
+    background-repeat: repeat-x;
+    border-color: #245580;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #337ab7;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+/* Standalone signup page: centre the form and give it room on small screens.
+   Scoped to .signup-page so the homepage form keeps its existing layout. */
+.signup-page #groupsio_embed_signup .email {
+    width: 80%;
+    margin: 0 auto 10px auto;
+}
+
+.signup-page #groupsio_embed_signup .button {
+    width: 40%;
+    margin: 0 auto;
+    display: block;
+}
+
+.signup-page #groupsio_embed_signup label {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .signup-page .newsletter-signup {
+        margin: 0 10px;
+    }
+
+    .signup-page #groupsio_embed_signup .email {
+        width: 90%;
+    }
+
+    .signup-page #groupsio_embed_signup .button {
+        width: 50%;
+    }
+
+    .signup-page .display-5 {
+        font-size: 2.5rem;
+    }
+
+    .signup-page .lead {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .signup-page .newsletter-signup {
+        padding: 20px !important;
+    }
+}
+
+/* "Everyone is welcome" callout — deliberately the most prominent block in the
+   About section, since "meets at a Catholic school" is the assumption it exists
+   to correct. */
+.welcome-callout {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.10), rgba(59, 130, 246, 0.10));
+    border-left: 5px solid var(--success-color);
+    border-radius: 10px;
+    text-align: left;
+}
+
+.welcome-callout h3 {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.welcome-callout p {
+    color: #333;
+}
+
+/* Year at a glance */
+.year-card {
+    background: #fff;
+    border-radius: 10px;
+    border-left: 4px solid var(--accent-color);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.year-month {
+    font-weight: 700;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.year-theme {
+    color: var(--dark-color);
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.year-highlights {
+    margin: 0;
+    padding-left: 1.1rem;
+    color: #444;
+}
+
+.year-highlights li {
+    margin-bottom: 4px;
+}
+
+/* Bootstrap's .text-muted is too light on white for body copy at this size. */
+.text-muted-dark {
+    color: #55585c;
+}
+
+/* How to join */
+.join-step {
+    background: var(--light-color);
+    border-radius: 10px;
+    border-top: 4px solid var(--secondary-color);
+    position: relative;
+}
+
+/* The cost card isn't a numbered step in the 1-2-3 sequence. */
+.join-step-cost {
+    background: var(--success-color);
+}
+
+.join-step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 12px;
 }
 
 /* Custom Scrollbar */
@@ -555,4 +742,20 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
     background: var(--secondary-color);
+}
+
+
+/* September spotlight — same white card and orange left border as the month
+   cards, just full width and slightly emphasised. It's the one part of the
+   section a family can act on today. */
+.year-spotlight {
+    border-left-width: 6px;
+}
+
+.year-spotlight .year-highlights li {
+    margin-bottom: 8px;
+}
+
+.year-spotlight-where {
+    color: #55585c;
 }

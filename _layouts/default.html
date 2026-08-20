@@ -3,9 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <meta name="description" content="{{ page.description | default: site.description }}">
-    
+    {%- assign page_title = page.title | default: site.title -%}
+    {%- if page.title %}{% assign full_title = page.title | append: " - " | append: site.title %}{% else %}{% assign full_title = site.title %}{% endif -%}
+    {%- assign page_description = page.description | default: site.description -%}
+    {%- assign page_url = page.url | absolute_url -%}
+    {%- assign share_image = '/assets/images/og-image.jpg' | absolute_url -%}
+
+    <title>{{ full_title }}</title>
+    <meta name="description" content="{{ page_description }}">
+    <link rel="canonical" href="{{ page_url }}">
+
+    <!-- Open Graph: controls how the site looks when shared in Facebook groups,
+         iMessage, Slack, etc. Without these a shared link renders as a bare URL. -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:title" content="{{ full_title }}">
+    <meta property="og:description" content="{{ page_description }}">
+    <meta property="og:url" content="{{ page_url }}">
+    <meta property="og:image" content="{{ share_image }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Cub Scouts around a campfire">
+    <meta property="og:locale" content="en_US">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ full_title }}">
+    <meta name="twitter:description" content="{{ page_description }}">
+    <meta name="twitter:image" content="{{ share_image }}">
+
+    <meta name="theme-color" content="#1e3a8a">
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
@@ -15,8 +42,9 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     
-    <!-- Favicon -->
+    <!-- Favicon / home-screen icon (the signup page is meant to be bookmarked on phones) -->
     <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
+    <link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
 </head>
 <body>
     <!-- Navigation -->
@@ -32,16 +60,19 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="{{ '/' | relative_url }}#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#activities">Activities</a>
+                        <a class="nav-link" href="{{ '/' | relative_url }}#activities">What We Do</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#join">Join Us</a>
+                        <a class="nav-link" href="{{ '/' | relative_url }}#year">The Year</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" href="{{ '/' | relative_url }}#how-to-join">How to Join</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ '/' | relative_url }}#contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -58,25 +89,25 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h5><i class="fas fa-campground me-2"></i>Cub Scout Pack 338</h5>
-                    <p class="mb-0">Building character, leadership, and outdoor skills in Seattle.</p>
+                    <h5><i class="fas fa-campground me-2" aria-hidden="true"></i>{{ site.data.pack.name }}</h5>
+                    <p class="mb-0">Camping, building, and giving back in Northeast Seattle.</p>
                 </div>
                 <div class="col-md-6 text-md-end">
                     <p class="mb-0">
-                        <i class="fas fa-envelope me-2"></i>
-                        <a href="mailto:leadership@pack338seattle.org" class="text-white text-decoration-none">
-                            leadership@pack338seattle.org
+                        <i class="fas fa-envelope me-2" aria-hidden="true"></i>
+                        <a href="mailto:{{ site.data.pack.email }}" class="text-white text-decoration-none">
+                            {{ site.data.pack.email }}
                         </a>
                     </p>
                     <p class="mb-0">
-                        <i class="fas fa-map-marker-alt me-2"></i>
-                        Our Lady of the Lake Catholic School
+                        <i class="fas fa-map-marker-alt me-2" aria-hidden="true"></i>
+                        {{ site.data.pack.location.name }}
                     </p>
                 </div>
             </div>
             <hr class="my-3">
             <div class="text-center">
-                <p class="mb-0">&copy; 2025 Cub Scout Pack 338 Seattle. All rights reserved.</p>
+                <p class="mb-0">&copy; {{ 'now' | date: "%Y" }} {{ site.data.pack.name }} Seattle. All rights reserved.</p>
             </div>
         </div>
     </footer>

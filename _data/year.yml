@@ -1,0 +1,90 @@
+# Year at a glance — the 2026–2027 program calendar.
+#
+# Source: "Pack 338 2026-2027 Calendar" in the vault. Those dates are still
+# PROPOSED pending confirmation against school calendars and venues, so the site
+# presents this as a typical year rather than a schedule to plan around. Exact
+# dates reach families through Groups.io (and _data/events.yml) once confirmed.
+#
+# Set `tentative: false` below once the calendar is locked and you want the page
+# to stop hedging.
+
+tentative: true
+season: 2026–2027
+
+# The one month we name actual dates for — the start of the year, when a
+# prospective family needs something concrete to show up to. Everything else
+# stays months-and-themes (see the branding guidelines: never publish a
+# proposed date). Source: "Pack 338 2026-2027 Calendar" in the vault.
+# Clear this block once September has passed.
+spotlight:
+  month: September
+  intro: Our first two dates are set — come to either one.
+  events:
+    - date: 2026-09-23
+      name: Kickoff + Rocket Build
+      detail: All-pack meeting — families build and decorate rockets together.
+      time: "6:30 PM"
+      place: Multi-Purpose Room, Our Lady of the Lake
+    - date: 2026-09-26
+      name: Rocket Launch
+      detail: We launch what we built. Bring the whole family.
+      time: null
+      place: null
+
+months:
+  - month: September
+    theme: Welcome to the Pack
+    highlights:
+      - Kickoff and model rocket build
+      - Rocket launch
+
+  - month: October
+    theme: Fall Fun & Scout Basics
+    highlights:
+      - Pumpkin trip to Swanson's farm
+      - Pumpkin carving contest
+
+  - month: November
+    theme: Honor & Citizenship
+    highlights:
+      - Veterans Day flag placement
+      - Pack potluck
+
+  - month: December
+    theme: Celebration & Traditions
+    highlights:
+      - Ornament making
+      - Holiday lights walk
+
+  - month: January
+    theme: Winter Fun & Safety
+    highlights:
+      - Snowball fight
+      - Fire station tour
+
+  - month: February
+    theme: Camping & Outdoors
+    highlights:
+      - Winter camp weekend
+
+  - month: March
+    theme: Sportsmanship & Competition
+    highlights:
+      - Pinewood Derby weigh-in
+      - Pinewood Derby race
+
+  - month: April
+    theme: Physical Fitness
+    highlights:
+      - Spring pack hike
+      - Recognition and awards night
+
+  - month: May
+    theme: Cub's Choice
+    highlights:
+      - Camp Edward overnight
+
+  - month: June
+    theme: Graduation & Family
+    highlights:
+      - Blue & Gold and Crossing Over ceremony

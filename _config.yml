@@ -1,13 +1,19 @@
 title: Cub Scout Pack 338 Seattle
-description: Join Cub Scout Pack 338 in Seattle, WA! Open to kids of any gender from Kindergarten through 5th grade.
+description: Cub Scout Pack 338 in Wedgwood, NE Seattle — open to kids of all genders, grades K–5, from any school, and from any faith background or none at all.
 url: "https://pack338seattle.org"
 baseurl: ""
 
 # Build settings
 markdown: kramdown
 permalink: pretty
+
+# Event times in _data/events.yml are Pacific; build in that zone so Liquid's
+# date filters render them correctly regardless of where the build runs.
+timezone: America/Los_Angeles
+
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 
 # Collections
 collections:
@@ -39,3 +45,7 @@ exclude:
   - .jekyll-cache/
   - .jekyll-metadata
   - README.md
+  - CLAUDE.md
+  - "*.sh"
+  - script/
+  - assets/images/README.md

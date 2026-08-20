@@ -17,11 +17,16 @@ Cub Scout Pack 338 is open to kids of any gender from Kindergarten through 5th g
 
 ## 🛠️ Local Development Setup
 
+Developed and deployed on Linux. macOS works too; the setup script covers both.
+
 ### Prerequisites
 
-- **Ruby** (version 2.6 or higher)
-- **RubyGems**
-- **Bundler** (install with `gem install bundler`)
+- **Ruby 3.2** (Jekyll 4.3 needs 2.7+; CI builds on 3.2)
+- **Bundler** (`gem install bundler`)
+
+If you don't already have a suitable Ruby, `./setup-ruby.sh` installs one via
+rbenv along with the build dependencies for your distro (apt, dnf, pacman,
+zypper, or Homebrew).
 
 ### Installation Steps
 
@@ -31,27 +36,40 @@ Cub Scout Pack 338 is open to kids of any gender from Kindergarten through 5th g
    cd pack338seattle.org
    ```
 
-2. **Install dependencies**
+2. **Install Ruby and dependencies**
    ```bash
-   bundle install
+   ./setup-ruby.sh        # only needed once, per machine
    ```
+   Already have Ruby 3.2 and Bundler? Just run `bundle install`.
 
 3. **Start the local server**
    ```bash
-   bundle exec jekyll serve
+   ./serve.sh
    ```
 
 4. **View your site**
-   Open your browser and navigate to `http://localhost:4000`
+   Open `http://localhost:4000`
+
+### Viewing from another device
+
+```bash
+./serve.sh --tailscale   # reachable from any device on your tailnet
+./serve.sh --lan         # reachable from anything on the local network
+```
+
+`--tailscale` prints the MagicDNS URL (e.g. `http://my-box.your-tailnet.ts.net:4000/`)
+so you can pull the site up on a phone to check the mobile layout. It requires
+the `tailscale` CLI and an active connection (`tailscale up`).
 
 ### Development Commands
 
 ```bash
+# Serve with live reload (default)
+./serve.sh
+PORT=4001 ./serve.sh          # different port
+
 # Build the site
 bundle exec jekyll build
-
-# Build and serve with live reload
-bundle exec jekyll serve --livereload
 
 # Build for production
 JEKYLL_ENV=production bundle exec jekyll build
@@ -74,6 +92,9 @@ pack338seattle.org/
 │   │   └── main.js     # Main JavaScript
 │   └── images/         # Images and icons
 ├── index.html           # Homepage content
+├── signup.html          # Standalone mailing-list signup page
+├── serve.sh             # Dev server (localhost / --tailscale / --lan)
+├── setup-ruby.sh        # One-time Ruby + rbenv install
 ├── Gemfile             # Ruby dependencies
 └── README.md           # This file
 ```
@@ -152,7 +173,7 @@ bundle install
 **Port conflicts**
 ```bash
 # Use a different port
-bundle exec jekyll serve --port 4001
+PORT=4001 ./serve.sh
 ```
 
 **Dependency issues**
@@ -163,19 +184,46 @@ gem update bundler
 bundle install
 ```
 
-### Windows-Specific Notes
+**`bundle install` fails to build native gems**
 
-- Install Ruby with [RubyInstaller](https://rubyinstaller.org/)
-- Use PowerShell or Command Prompt (not Git Bash)
-- Install the MSYS2 development toolchain when prompted
+You're missing build headers. Re-run `./setup-ruby.sh`, which installs them for
+your distro, or see the
+[ruby-build wiki](https://github.com/rbenv/ruby-build/wiki#suggested-build-environment).
+
+**`--tailscale` says Tailscale isn't connected**
+```bash
+tailscale status    # check state
+tailscale up        # connect
+```
 
 ## 📧 Newsletter Integration
 
-The website includes a Groups.io newsletter signup form. To modify:
+The Groups.io signup form lives in `_includes/signup-form.html` and is used by
+both the homepage and `/signup/`. Its URLs come from `_data/pack.yml`, so
+changing the group or the signup link is a one-line edit there.
 
-1. **Update form action**: Edit the form action URL in `index.html`
-2. **Styling**: Modify the CSS in the newsletter section
-3. **Form fields**: Add/remove fields as needed
+The hidden `b_...` field is an anti-bot honeypot — leave it in place.
+
+## 📅 Upcoming Events
+
+Events on the homepage are pulled from the Groups.io calendar **at build time**,
+not in the visitor's browser:
+
+1. `.github/workflows/update-events.yml` runs daily and calls
+   `script/fetch-events.rb`
+2. That script fetches the `.ics` feed and writes `_data/events.yml`
+3. `_includes/upcoming-events.html` renders it — no JavaScript, no CORS proxies
+
+To refresh events locally:
+
+```bash
+TZ=America/Los_Angeles ruby script/fetch-events.rb
+```
+
+When the calendar has no future events (typical over the summer, between
+scouting years), the widget shows the regular meeting pattern from
+`_data/pack.yml` and points families at the mailing list. **Posting the coming
+year's dates in Groups.io is what makes events appear** — no code change needed.
 
 ## 🚀 Performance Optimization
 

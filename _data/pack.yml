@@ -1,0 +1,93 @@
+# Pack facts used across the site. Edit here, not in the page markup.
+#
+# Wording here follows "Pack 338 Branding Guidelines" (vault:
+# 01 - Personal/01.10 - Projects/01.10.20 - Pack 338). The rules that bite most
+# often: "kids of all genders" (never "any gender" or "boys and girls"),
+# "grades K–5" with an en dash, and the Oxford comma in every list of three.
+name: Cub Scout Pack 338
+short_name: Pack 338
+email: leadership@pack338seattle.org
+
+grades: grades K–5
+
+# Who the pack is for. All three dimensions — gender, school, and creed — get
+# said out loud; none is left to be inferred. We meet at a parish school, so
+# silence on any of them makes families screen themselves out.
+welcome:
+  headline: Everyone is welcome
+  # Chris's phrasing: name the OLL connection, then state the openness plainly
+  # and move on. Said once, on the page, in one place — repeating it in the hero
+  # and the join steps too made it read as protesting.
+  body: >-
+    While we do meet at Our Lady of the Lake, Pack 338 is open to kids of all
+    genders, from any school, and from any faith background or none at all. Our
+    Cubs come from schools all over Northeast Seattle.
+
+# The program is wider than camping. Scouting's outdoor reputation recruits for
+# us and also caps who thinks they're a fit, so every description names the
+# outdoors specifically AND the rest of it alongside.
+program:
+  - heading: Get outside
+    icon: fa-campground
+    body: >-
+      Hikes, camping trips, and other outdoor adventures — plus the skills that
+      make them work, from knots to staying warm and dry.
+  - heading: Build & launch
+    icon: fa-rocket
+    body: >-
+      Hands-on engineering: Pinewood Derby cars, model rockets, and whatever
+      else a kid can design, build, and set loose.
+  - heading: Care & give back
+    icon: fa-hands-helping
+    body: >-
+      Citizenship, service projects in the neighborhood, and learning about
+      nature and conservation — caring for the places we use.
+
+location:
+  name: Our Lady of the Lake Catholic School
+  room: Multi-Purpose Room (MPR)
+  # NEVER the parish address (8900 35th Ave NE) — that sends families to the
+  # church instead of the school MPR.
+  street: 3520 NE 89th St
+  neighborhood: Wedgwood
+  city: Seattle
+  state: WA
+  zip: "98115"
+  map_url: https://maps.google.com/?q=3520+NE+89th+St+Seattle+WA+98115
+
+meetings:
+  # Shown in the events widget when no upcoming events are published.
+  # Not "1st, 2nd, and 3rd Wednesdays" — it's twice a month. Each den meets
+  # once a month; the pack runs two den nights so the K–2 and 3–5 groups each
+  # get one. A family attends two meetings a month, not three.
+  summary: Wednesday evenings at 6:30 PM, twice a month
+  detail: >-
+    One all-pack meeting and one meeting for your scout's den each month, in the
+    school's Multi-Purpose Room, plus an optional weekend activity.
+
+# "How to Join" answers. dues is still open — see the task in the vault daily
+# note for 2026-08-08.
+joining:
+  drop_in: true
+  uniform_required: false
+  # Two separate costs: dues paid to the pack, and Scouting America's national
+  # registration fee. Fill either in when confirmed and the copy states it
+  # instead of pointing at email.
+  dues:
+    pack: null            # e.g. "$120 a year"
+    registration: null    # e.g. "$85 a year"
+  # Cost should not keep a kid out; families in need contact leadership.
+  financial_help: true
+  # Direct unit registration, from the branding guidelines' facts table.
+  registration_url: https://my.scouting.org/VES/OnlineReg/1.0.0/?tu=UF-MB-609paa0338
+  beascout_url: https://beascout.scouting.org/list/?zip=98115&program%5B%5D=cub_scouts
+  council: Chief Seattle Council
+  district: Aurora District
+  chartered_by: Our Lady of the Lake Parish
+
+groups_io:
+  signup_url: https://pack338.groups.io/g/all/signup?u=7190545327412113133
+  calendar_url: https://pack338.groups.io/g/all/calendar
+  ics_url: https://pack338.groups.io/g/all/ics/12344147/2126990759/feed.ics
+  # Anti-bot honeypot field name expected by the Groups.io form. Do not remove.
+  honeypot_field: b_7190545327412113133

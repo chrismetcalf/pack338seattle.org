@@ -1,0 +1,92 @@
+{% comment %}
+Answers the questions a prospective family actually asks before they'll hand
+over an email address. Facts come from _data/pack.yml → joining.
+
+dues and registration_url are null until confirmed; the copy degrades honestly
+rather than inventing numbers.
+{% endcomment %}
+<section id="how-to-join" class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 mx-auto">
+                <h2 class="section-title text-center mb-5">How to Join</h2>
+
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="join-step p-4 h-100">
+                            <div class="join-step-number">1</div>
+                            <h4>Just come to a meeting</h4>
+                            <p class="mb-0">
+                                {% if site.data.pack.joining.drop_in %}
+                                You don't need to sign up first, and
+                                {% unless site.data.pack.joining.uniform_required %}
+                                <strong>no uniform is necessary</strong> &mdash; come as you are.
+                                {% endunless %}
+                                Show up on a meeting night, see whether your scout likes it,
+                                and ask us anything. Visitors are genuinely welcome, no commitment needed.
+                                {% endif %}
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="join-step p-4 h-100">
+                            <div class="join-step-number">2</div>
+                            <h4>Get on the mailing list</h4>
+                            <p class="mb-0">
+                                Our Groups.io list is where meeting reminders, dates, and
+                                changes go out. Signing up costs nothing and commits you to
+                                nothing.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="join-step p-4 h-100">
+                            <div class="join-step-number">3</div>
+                            <h4>Register when you're ready</h4>
+                            <p class="mb-0">
+                                {% if site.data.pack.joining.registration_url %}
+                                When your scout wants to stay,
+                                <a href="{{ site.data.pack.joining.registration_url }}" target="_blank" rel="noopener">register with Scouting America</a>.
+                                {% else %}
+                                When your scout wants to stay, we'll walk you through registering
+                                with Scouting America &mdash; you can also find us on
+                                <a href="{{ site.data.pack.joining.beascout_url }}" target="_blank" rel="noopener">BeAScout</a>.
+                                {% endif %}
+                                We're chartered by {{ site.data.pack.joining.chartered_by }}, in the
+                                {{ site.data.pack.joining.district }} of {{ site.data.pack.joining.council }}.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="join-step p-4 h-100">
+                            <div class="join-step-number join-step-cost">
+                                <i class="fas fa-dollar-sign" aria-hidden="true"></i>
+                            </div>
+                            <h4>What it costs</h4>
+                            <p class="mb-0">
+                                There are two costs: annual dues to the pack, and a registration
+                                fee to Scouting America.
+                                {%- assign d = site.data.pack.joining.dues %}
+                                {%- if d.pack and d.registration %}
+                                Dues are {{ d.pack }} and registration is {{ d.registration }}.
+                                {%- endif %}
+                                {%- if site.data.pack.joining.financial_help %}
+                                Cost shouldn't keep any kid out of Scouting &mdash; contact us if
+                                your family needs help.
+                                {%- endif %}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-center mt-4 mb-0">
+                    Questions? Email
+                    <a href="mailto:{{ site.data.pack.email }}">{{ site.data.pack.email }}</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
