@@ -40,7 +40,7 @@ program:
   - heading: Care & give back
     icon: fa-hands-helping
     body: >-
-      Citizenship, service projects in the neighborhood, and learning about
+      Citizenship, service projects in our community, and learning about
       nature and conservation — caring for the places we use.
 
 location:
@@ -60,10 +60,14 @@ meetings:
   # Not "1st, 2nd, and 3rd Wednesdays" — it's twice a month. Each den meets
   # once a month; the pack runs two den nights so the K–2 and 3–5 groups each
   # get one. A family attends two meetings a month, not three.
+  #
+  # Say "at least one weekend adventure" — never "an optional weekend activity".
+  # The hedge sits in the one place a family is looking for the fun part, and
+  # the year plan puts an outing in every month, so "at least" is a floor.
   summary: Wednesday evenings at 6:30 PM, twice a month
   detail: >-
     One all-pack meeting and one meeting for your scout's den each month, in the
-    school's Multi-Purpose Room, plus an optional weekend activity.
+    school's Multi-Purpose Room, plus at least one weekend adventure.
 
 # "How to Join" answers. dues is still open — see the task in the vault daily
 # note for 2026-08-08.
