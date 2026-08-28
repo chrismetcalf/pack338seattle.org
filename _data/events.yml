@@ -34,9 +34,10 @@ events:
   location: Our Lady of the Lake School - Multipurpose Room (MPR)
   url: https://pack338.groups.io/g/all/viewevent?eventid=3249927
 - summary: Rocket Launch (Pack 338)
-  start: 2026-09-26
-  all_day: true
-  end: 2026-09-27
+  start: '2026-09-26T15:00:00-07:00'
+  all_day: false
+  end: '2026-09-26T17:00:00-07:00'
+  location: Kite Hill, Magnuson Park - 7400 Sand Point Way NE
   url: https://pack338.groups.io/g/all/viewevent?eventid=3249928
 - summary: Den Meeting - Bobcat (Pack 338)
   start: '2026-10-07T18:30:00-07:00'
