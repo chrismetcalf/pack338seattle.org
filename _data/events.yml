@@ -55,3 +55,85 @@ events:
   all_day: true
   end: 2026-10-11
   url: https://pack338.groups.io/g/all/viewevent?eventid=3249931
+- summary: Den Meeting - Bobcat (Pack 338)
+  start: '2026-10-14T18:30:00-07:00'
+  all_day: false
+  end: '2026-10-14T19:30:00-07:00'
+  location: Our Lady of the Lake Church - Jubilee Room
+  url: https://pack338.groups.io/g/all/viewevent?eventid=3249930
+- summary: Swanson's Farm Pumpkin Trip - All-Pack (Pack 338)
+  start: 2026-10-24
+  all_day: true
+  end: 2026-10-25
+  url: https://pack338.groups.io/g/all/viewevent?eventid=3249932
+- summary: Pumpkin Carving + Contest - All-Pack (Pack 338)
+  start: '2026-10-28T18:30:00-07:00'
+  all_day: false
+  end: '2026-10-28T19:30:00-07:00'
+  location: Our Lady of the Lake School - Multipurpose Room (MPR)
+  url: https://pack338.groups.io/g/all/viewevent?eventid=3249933
+- summary: Den Meeting - Citizenship (Pack 338)
+  start: '2026-11-04T18:30:00-08:00'
+  all_day: false
+  end: '2026-11-04T19:30:00-08:00'
+  location: Our Lady of the Lake Church - Jubilee Room
+  url: https://pack338.groups.io/g/all/viewevent?eventid=3249934
+- summary: Wreath Orders Due (Pack 338)
+  start: 2026-11-09
+  all_day: true
+  end: 2026-11-10
+  url: https://pack338.groups.io/g/all/viewevent?eventid=3249935
+- summary: BWA Den Meeting - Citizenship (Pack 338)
+  start: '2026-11-10T18:30:00-08:00'
+  all_day: false
+  end: '2026-11-10T19:30:00-08:00'
+  location: Our Lady of the Lake Church - Jubilee Room
+  url: https://pack338.groups.io/g/all/viewevent?eventid=3249937
+- summary: Veterans Day - SPS No School
+  start: 2026-11-11
+  all_day: true
+  end: 2026-11-12
+  url: https://pack338.groups.io/g/all/viewevent?eventid=3249972
+- summary: Veterans Day Flag Placement - All-Pack Field Trip (Pack 338)
+  start: 2026-11-11
+  all_day: true
+  end: 2026-11-12
+  url: https://pack338.groups.io/g/all/viewevent?eventid=3249936
+- summary: Pack Potluck - All-Pack (Pack 338)
+  start: '2026-11-18T18:30:00-08:00'
+  all_day: false
+  end: '2026-11-18T19:30:00-08:00'
+  location: Our Lady of the Lake School - Multipurpose Room (MPR)
+  url: https://pack338.groups.io/g/all/viewevent?eventid=3249938
+- summary: '"Advanced" Activity - Hike (Pack 338)'
+  start: 2026-11-21
+  all_day: true
+  end: 2026-11-22
+  url: https://pack338.groups.io/g/all/viewevent?eventid=3249939
+- summary: SPS Conference Days - No School (most elem/K-8)
+  start: 2026-11-23
+  all_day: true
+  end: 2026-11-26
+  url: https://pack338.groups.io/g/all/viewevent?eventid=3249973
+- summary: Thanksgiving + Native American Heritage Day - SPS No School
+  start: 2026-11-26
+  all_day: true
+  end: 2026-11-28
+  url: https://pack338.groups.io/g/all/viewevent?eventid=3249974
+- summary: Den Meeting - Family & Reverence (Pack 338)
+  start: '2026-12-02T18:30:00-08:00'
+  all_day: false
+  end: '2026-12-02T19:30:00-08:00'
+  location: Our Lady of the Lake Church - Jubilee Room
+  url: https://pack338.groups.io/g/all/viewevent?eventid=3249940
+- summary: Museum of Flight + Wreath Pick-Up - All-Pack Outing (Pack 338)
+  start: 2026-12-05
+  all_day: true
+  end: 2026-12-06
+  url: https://pack338.groups.io/g/all/viewevent?eventid=3249943
+- summary: Den Meeting - Family & Reverence (Pack 338)
+  start: '2026-12-09T18:30:00-08:00'
+  all_day: false
+  end: '2026-12-09T19:30:00-08:00'
+  location: Our Lady of the Lake Church - Jubilee Room
+  url: https://pack338.groups.io/g/all/viewevent?eventid=3249941

@@ -1,0 +1,87 @@
+{% comment %}
+The join progression: three ways in, ordered by how much they ask of a family.
+
+Deliberately a ladder rather than one call to action. Per the branding
+guidelines, the registration link belongs in the Join section and "sign up" is
+correct wording now that the link exists — but the mandated register is "plain,
+warm, and low-pressure," so a paid national registration is not the lead ask.
+Visiting costs nothing, the mailing list is the capture that lets us reach a
+family again, and registration is for people who have already decided.
+
+Tier 1 names the next all-pack MEETING, which is the thing a visitor can
+actually drop in on. Two conditions, both needed: "All-Pack" in the summary
+(excludes den meetings) and the OLL School location (excludes all-pack outings
+and field trips — the State Fair and Museum of Flight trips are all-pack but
+are not somewhere to turn up cold). Degrades to the cadence when the calendar
+runs out.
+{% endcomment %}
+
+{%- assign now = site.time | date: '%s' | plus: 0 -%}
+{%- assign next_event = false -%}
+{%- for event in site.data.events.events -%}
+  {%- assign start = event.start | date: '%s' | plus: 0 -%}
+  {%- if next_event == false and start >= now and event.summary contains 'All-Pack' and event.location contains 'Our Lady of the Lake School' -%}
+    {%- assign next_event = event -%}
+  {%- endif -%}
+{%- endfor -%}
+
+<div class="join-ladder">
+
+    <div class="join-tier">
+        <div class="join-tier-number">1</div>
+        <div class="join-tier-body">
+            <h3 class="h4 mb-2">Come see us</h3>
+            <p class="mb-3">
+                You don't need to sign up first, and no uniform is necessary &mdash; come as
+                you are. Visitors are genuinely welcome, no commitment needed.
+            </p>
+            {%- if next_event %}
+            <p class="join-tier-next mb-3">
+                <i class="fas fa-calendar-day me-2" aria-hidden="true"></i>
+                <strong>Next all-pack meeting:</strong>
+                {{ next_event.start | date: "%A, %B %-d" }}
+                {%- unless next_event.all_day %} at {{ next_event.start | date: "%-I:%M %p" }}{% endunless %}
+                &mdash; {{ next_event.summary | remove: ' (Pack 338)' | remove: ' - All-Pack Meeting' | remove: 'All-Pack Meeting - ' | remove: ' - All-Pack' }}
+            </p>
+            {%- else %}
+            <p class="join-tier-next mb-3">
+                <i class="fas fa-clock me-2" aria-hidden="true"></i>
+                <strong>We meet {{ site.data.pack.meetings.summary }}</strong>
+            </p>
+            {%- endif %}
+            <a href="#upcoming-events" class="btn btn-light btn-sm">
+                <i class="fas fa-calendar-alt me-2" aria-hidden="true"></i>See upcoming dates
+            </a>
+        </div>
+    </div>
+
+    <div class="join-tier join-tier-featured">
+        <div class="join-tier-number">2</div>
+        <div class="join-tier-body">
+            <span class="join-tier-badge">Most families start here</span>
+            <h3 class="h4 mb-2">Get on the mailing list</h3>
+            <p class="mb-3">
+                Meeting reminders, dates, and changes go out here first. It costs nothing
+                and commits you to nothing.
+            </p>
+            {% include signup-form.html %}
+        </div>
+    </div>
+
+    <div class="join-tier">
+        <div class="join-tier-number">3</div>
+        <div class="join-tier-body">
+            <h3 class="h4 mb-2">Sign up</h3>
+            <p class="mb-3">
+                When your scout wants to stay, register with Scouting America. We're
+                chartered by {{ site.data.pack.joining.chartered_by }}, in the
+                {{ site.data.pack.joining.district }} of {{ site.data.pack.joining.council }}.
+            </p>
+            <a href="{{ site.data.pack.joining.registration_url }}" target="_blank" rel="noopener"
+               class="btn btn-accent">
+                <i class="fas fa-user-plus me-2" aria-hidden="true"></i>Sign up with Scouting America
+            </a>
+        </div>
+    </div>
+
+</div>

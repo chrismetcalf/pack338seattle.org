@@ -45,3 +45,6 @@ yarn-error.log*
 # Windows
 *.lnk
 
+
+# Playwright MCP screenshot/snapshot artifacts
+.playwright-mcp/

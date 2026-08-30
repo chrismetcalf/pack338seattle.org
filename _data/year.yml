@@ -11,26 +11,6 @@
 tentative: true
 season: 2026–2027
 
-# The one month we name actual dates for — the start of the year, when a
-# prospective family needs something concrete to show up to. Everything else
-# stays months-and-themes (see the branding guidelines: never publish a
-# proposed date). Source: "Pack 338 2026-2027 Calendar" in the vault.
-# Clear this block once September has passed.
-spotlight:
-  month: September
-  intro: Our first two dates are set — come to either one.
-  events:
-    - date: 2026-09-23
-      name: Kickoff + Rocket Build
-      detail: All-pack meeting — families build and decorate rockets together.
-      time: "6:30 PM"
-      place: Multi-Purpose Room, Our Lady of the Lake
-    - date: 2026-09-26
-      name: Rocket Launch
-      detail: We launch what we built. Bring the whole family.
-      time: null
-      place: null
-
 months:
   - month: September
     theme: Welcome to the Pack

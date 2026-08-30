@@ -9,9 +9,15 @@ configured timezone.
 
 {%- assign now = site.time | date: '%s' | plus: 0 -%}
 {%- assign upcoming_count = 0 -%}
+{%- comment -%}
+The Groups.io calendar carries school holidays and no-school days alongside pack
+dates — useful to a pack family, noise to a prospective one reading this as "what
+does the pack do". Pack entries are suffixed "(Pack 338)"; everything else is
+filtered out here and in the loop below.
+{%- endcomment -%}
 {%- for event in site.data.events.events -%}
   {%- assign start = event.start | date: '%s' | plus: 0 -%}
-  {%- if start >= now -%}{%- assign upcoming_count = upcoming_count | plus: 1 -%}{%- endif -%}
+  {%- if start >= now and event.summary contains '(Pack 338)' -%}{%- assign upcoming_count = upcoming_count | plus: 1 -%}{%- endif -%}
 {%- endfor -%}
 
 <div id="upcoming-events" class="upcoming-events">
@@ -22,7 +28,7 @@ configured timezone.
         {%- assign shown = 0 -%}
         {%- for event in site.data.events.events -%}
         {%- assign start = event.start | date: '%s' | plus: 0 -%}
-        {%- if start >= now and shown < 5 -%}
+        {%- if start >= now and shown < 5 and event.summary contains '(Pack 338)' -%}
         {%- assign shown = shown | plus: 1 -%}
         <div class="event-item">
             <div class="event-date">
@@ -35,9 +41,9 @@ configured timezone.
             <div class="event-title">
                 <i class="fas fa-flag me-2" aria-hidden="true"></i>
                 {%- if event.url %}
-                <a href="{{ event.url }}" target="_blank" rel="noopener" class="event-title-link">{{ event.summary }}</a>
+                <a href="{{ event.url }}" target="_blank" rel="noopener" class="event-title-link">{{ event.summary | remove: ' (Pack 338)' }}</a>
                 {%- else %}
-                {{ event.summary }}
+                {{ event.summary | remove: ' (Pack 338)' }}
                 {%- endif %}
             </div>
         </div>

@@ -26,7 +26,9 @@ require 'date'
 
 FEED_URL = 'https://pack338.groups.io/g/all/ics/12344147/2126990759/feed.ics'
 OUTPUT = File.expand_path('../_data/events.yml', __dir__)
-DEFAULT_LIMIT = 10
+# The templates filter this list down to pack events, so the window has to be
+# wide enough that a run of school holidays can't crowd the pack dates out.
+DEFAULT_LIMIT = 25
 
 # --- iCal parsing -----------------------------------------------------------
 

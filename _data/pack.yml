@@ -34,9 +34,15 @@ program:
       make them work, from knots to staying warm and dry.
   - heading: Build & launch
     icon: fa-rocket
+    # Every item here is on the published calendar: rockets built in September
+    # and launched days later, pumpkins in October, ornaments in December, and
+    # the Derby cars built across two March den meetings before race day. Keep
+    # it that way — "whatever a kid can build" was true but generic, and a
+    # family comparing packs is looking for what actually happens.
     body: >-
-      Hands-on engineering: Pinewood Derby cars, model rockets, and whatever
-      else a kid can design, build, and set loose.
+      Hands-on building: model rockets, Pinewood Derby cars, carved pumpkins,
+      and holiday ornaments — plus the launch day, race day, and contest
+      that follow.
   - heading: Care & give back
     icon: fa-hands-helping
     body: >-

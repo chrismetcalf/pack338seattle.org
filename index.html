@@ -9,16 +9,26 @@ description: Cub Scout Pack 338 in Wedgwood, NE Seattle — open to kids of all 
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mx-auto">
+                {%- comment -%}
+                No tent glyph here: the navbar brand carries one a few pixels above,
+                and on mobile the hero button carried a third — three of the same icon
+                stacked down the left edge. The space before the <br> is load-bearing:
+                the break is hidden under lg, so without it "Cub Scout" and "Pack 338"
+                render as "ScoutPack 338".
+                {%- endcomment -%}
                 <h1 class="display-4 fw-bold mb-4">
-                    <i class="fas fa-campground me-3"></i>
-                    Welcome to Cub Scout<br class="d-none d-lg-block">Pack 338
+                    Welcome to Cub Scout <br class="d-none d-lg-block">Pack 338
                 </h1>
                 <p class="lead mb-4">
                     Join the adventure! Open to kids of all genders, {{ site.data.pack.grades }}.
                 </p>
                 <div class="hero-buttons">
+                    {%- comment -%}
+                    The old label promised registration and delivered a mailing-list box.
+                    The ask now matches what the Join section actually leads with.
+                    {%- endcomment -%}
                     <a href="#join" class="btn btn-primary btn-lg me-3 mb-2">
-                        <i class="fas fa-sign-in-alt me-2"></i>Join Us Today
+                        <i class="fas fa-door-open me-2"></i>Come to a Meeting
                     </a>
                     <a href="#about" class="btn btn-outline-light btn-lg mb-2">
                         <i class="fas fa-info-circle me-2"></i>Learn More
@@ -74,22 +84,46 @@ description: Cub Scout Pack 338 in Wedgwood, NE Seattle — open to kids of all 
 
 {% include what-we-do.html %}
 
-{% include year-at-a-glance.html %}
-
-{% include how-to-join.html %}
-
 <!-- Join Us Section -->
 <section id="join" class="py-5 bg-primary text-white">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 mx-auto text-center">
-                <h2 class="section-title mb-4">Join Cub Scout Pack 338!</h2>
-                <p class="lead mb-5">Ready to start your scouting adventure? Sign up for our mailing list to stay informed about upcoming events and meetings.</p>
-                
-                <!-- Newsletter Signup Form -->
-                {% include signup-form.html %}
+            <div class="col-lg-8 mx-auto">
+                <h2 class="section-title text-center mb-3">Join Cub Scout Pack 338</h2>
+                <p class="lead text-center mb-5">
+                    Three ways in, ordered by how much each one asks of you. Start
+                    wherever you like &mdash; most families come to a meeting first.
+                </p>
 
-                <div class="mt-4">
+                {% include join-ladder.html %}
+
+                {%- comment -%}
+                Cost and the questions line used to live in the How to Join section.
+                That section duplicated the ladder above and was removed; these two
+                answers were the only part of it that wasn't repeated here.
+                {%- endcomment -%}
+                <div class="join-footnote mt-4">
+                    <p class="mb-2">
+                        <i class="fas fa-dollar-sign me-2" aria-hidden="true"></i>
+                        <strong>What it costs:</strong> there are two costs &mdash; annual dues
+                        to the pack, and a registration fee to Scouting America.
+                        {%- assign d = site.data.pack.joining.dues %}
+                        {%- if d.pack and d.registration %}
+                        Dues are {{ d.pack }} and registration is {{ d.registration }}.
+                        {%- endif %}
+                        {%- if site.data.pack.joining.financial_help %}
+                        Cost shouldn't keep any kid out of Scouting &mdash; contact us if your
+                        family needs help.
+                        {%- endif %}
+                    </p>
+                    <p class="mb-0">
+                        <i class="fas fa-envelope me-2" aria-hidden="true"></i>
+                        Questions? Email
+                        <a href="mailto:{{ site.data.pack.email }}">{{ site.data.pack.email }}</a>
+                    </p>
+                </div>
+
+                <div class="mt-5">
                     {% include upcoming-events.html %}
                 </div>
             </div>
@@ -98,6 +132,8 @@ description: Cub Scout Pack 338 in Wedgwood, NE Seattle — open to kids of all 
 </section>
 
 <!-- Contact Section -->
+{% include year-at-a-glance.html %}
+
 <section id="contact" class="py-5">
     <div class="container">
         <div class="row">
