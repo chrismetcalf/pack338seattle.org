@@ -260,24 +260,6 @@ body {
     margin-bottom: 20px;
 }
 
-/* Center the Groups.io signup form elements */
-#groupsio_embed_signup .email {
-    display: block;
-    margin: 0 auto 10px auto !important;
-    text-align: center;
-    width: 80% !important;
-    min-width: 200px;
-}
-
-#groupsio_embed_signup label {
-    text-align: center;
-}
-
-#groupsio_embed_signup .button {
-    display: block;
-    margin: 0 auto !important;
-}
-
 /* Contact Cards */
 .contact-card {
     background: white;
@@ -599,6 +581,29 @@ html {
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
+}
+
+/* Centre the form. This has to sit AFTER the Groups.io defaults above, not
+   before them: those set .button to display:inline-block, and `margin: 0 auto`
+   does nothing on an inline-block — the button sat hard against the left edge
+   under a centred field. The old rule tried to win with !important on the
+   margin, which was never the property losing. */
+#groupsio_embed_signup label {
+    text-align: center;
+}
+
+#groupsio_embed_signup .email {
+    display: block;
+    width: 80%;
+    min-width: 200px;
+    margin: 0 auto 12px auto;
+    text-align: center;
+}
+
+#groupsio_embed_signup .button {
+    display: block;
+    margin: 0 auto;
+    float: none;
 }
 
 /* Standalone signup page: centre the form and give it room on small screens.
