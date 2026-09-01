@@ -2,11 +2,6 @@
 # Do not edit by hand — .github/workflows/update-events.yml overwrites it.
 # Source: https://pack338.groups.io/g/all/ics/12344147/2126990759/feed.ics
 events:
-- summary: ASB First Day of School
-  start: 2026-09-01
-  all_day: true
-  end: 2026-09-02
-  url: https://pack338.groups.io/g/all/viewevent?eventid=3249986
 - summary: SPS First Day of School (grades 1-12)
   start: 2026-09-02
   all_day: true
@@ -137,3 +132,9 @@ events:
   end: '2026-12-09T19:30:00-08:00'
   location: Our Lady of the Lake Church - Jubilee Room
   url: https://pack338.groups.io/g/all/viewevent?eventid=3249941
+- summary: Ornament-Making - All-Pack (Pack 338)
+  start: '2026-12-16T18:30:00-08:00'
+  all_day: false
+  end: '2026-12-16T19:30:00-08:00'
+  location: Our Lady of the Lake School - Multipurpose Room (MPR)
+  url: https://pack338.groups.io/g/all/viewevent?eventid=3249942
