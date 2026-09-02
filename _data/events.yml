@@ -2,16 +2,6 @@
 # Do not edit by hand — .github/workflows/update-events.yml overwrites it.
 # Source: https://pack338.groups.io/g/all/ics/12344147/2126990759/feed.ics
 events:
-- summary: SPS First Day of School (grades 1-12)
-  start: 2026-09-02
-  all_day: true
-  end: 2026-09-03
-  url: https://pack338.groups.io/g/all/viewevent?eventid=3249969
-- summary: OLL First Day of School (noon dismissal)
-  start: 2026-09-02
-  all_day: true
-  end: 2026-09-03
-  url: https://pack338.groups.io/g/all/viewevent?eventid=3249982
 - summary: Labor Day - SPS No School
   start: 2026-09-07
   all_day: true
@@ -138,3 +128,13 @@ events:
   end: '2026-12-16T19:30:00-08:00'
   location: Our Lady of the Lake School - Multipurpose Room (MPR)
   url: https://pack338.groups.io/g/all/viewevent?eventid=3249942
+- summary: Christmas Lights Walk - Olympic Manor (Pack 338)
+  start: 2026-12-18
+  all_day: true
+  end: 2026-12-19
+  url: https://pack338.groups.io/g/all/viewevent?eventid=3249944
+- summary: SPS Winter Break - No School
+  start: 2026-12-21
+  all_day: true
+  end: 2027-01-02
+  url: https://pack338.groups.io/g/all/viewevent?eventid=3249975
