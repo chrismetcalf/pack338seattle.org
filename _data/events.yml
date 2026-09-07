@@ -2,11 +2,6 @@
 # Do not edit by hand — .github/workflows/update-events.yml overwrites it.
 # Source: https://pack338.groups.io/g/all/ics/12344147/2126990759/feed.ics
 events:
-- summary: Labor Day - SPS No School
-  start: 2026-09-07
-  all_day: true
-  end: 2026-09-08
-  url: https://pack338.groups.io/g/all/viewevent?eventid=3249970
 - summary: WA State Fair - All-Pack Outing (Pack 338)
   start: 2026-09-13
   all_day: true
@@ -138,3 +133,9 @@ events:
   all_day: true
   end: 2027-01-02
   url: https://pack338.groups.io/g/all/viewevent?eventid=3249975
+- summary: Snowball Fight - All-Pack (Pack 338)
+  start: '2027-01-06T18:30:00-08:00'
+  all_day: false
+  end: '2027-01-06T19:30:00-08:00'
+  location: Our Lady of the Lake School - Multipurpose Room (MPR)
+  url: https://pack338.groups.io/g/all/viewevent?eventid=3249945
