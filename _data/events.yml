@@ -2,12 +2,6 @@
 # Do not edit by hand — .github/workflows/update-events.yml overwrites it.
 # Source: https://pack338.groups.io/g/all/ics/12344147/2126990759/feed.ics
 events:
-- summary: WA State Fair - All-Pack Outing (Pack 338)
-  start: '2026-09-13T10:00:00-07:00'
-  all_day: false
-  end: '2026-09-13T14:00:00-07:00'
-  location: Red Gate, Washington State Fair, 122 9th Ave SW, Puyallup, WA 98371 (https://maps.app.goo.gl/F7phPRrhTwVMWq938)
-  url: https://pack338.groups.io/g/all/viewevent?eventid=3249926
 - summary: Kickoff + Rocket Build - All-Pack (Pack 338)
   start: '2026-09-23T18:30:00-07:00'
   all_day: false
@@ -140,3 +134,8 @@ events:
   end: '2027-01-06T19:30:00-08:00'
   location: Our Lady of the Lake School - Multipurpose Room (MPR)
   url: https://pack338.groups.io/g/all/viewevent?eventid=3249945
+- summary: Sledding + Snowball Fight at Hyak (Pack 338)
+  start: 2027-01-09
+  all_day: true
+  end: 2027-01-10
+  url: https://pack338.groups.io/g/all/viewevent?eventid=3249946
