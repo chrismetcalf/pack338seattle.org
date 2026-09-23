@@ -14,11 +14,23 @@ events:
   end: '2026-09-26T17:00:00-07:00'
   location: Kite Hill, Magnuson Park - 7400 Sand Point Way NE
   url: https://pack338.groups.io/g/all/viewevent?eventid=3249928
+- summary: New Parent Orientation + Office Hours (Pack 338)
+  start: '2026-09-27T19:30:00-07:00'
+  all_day: false
+  end: '2026-09-27T20:00:00-07:00'
+  location: Zoom - https://binti.zoom.us/j/3303188382
+  url: https://pack338.groups.io/g/all/viewevent?eventid=3277697
+- summary: Leadership Meeting (Pack 338)
+  start: '2026-09-27T20:00:00-07:00'
+  all_day: false
+  end: '2026-09-27T21:00:00-07:00'
+  location: Zoom - https://binti.zoom.us/j/3303188382
+  url: https://pack338.groups.io/g/all/viewevent?eventid=3277698
 - summary: Den Meeting - Bobcat (Pack 338)
   start: '2026-10-07T18:30:00-07:00'
   all_day: false
   end: '2026-10-07T19:30:00-07:00'
-  location: Our Lady of the Lake Church - Jubilee Room
+  location: Our Lady of the Lake School - Multipurpose Room (MPR)
   url: https://pack338.groups.io/g/all/viewevent?eventid=3249929
 - summary: SPS No School - State In-Service Day
   start: 2026-10-09
@@ -26,9 +38,10 @@ events:
   end: 2026-10-10
   url: https://pack338.groups.io/g/all/viewevent?eventid=3249971
 - summary: Discovery Park Hike to the Lighthouse (Pack 338)
-  start: 2026-10-10
-  all_day: true
-  end: 2026-10-11
+  start: '2026-10-10T11:00:00-07:00'
+  all_day: false
+  end: '2026-10-10T13:30:00-07:00'
+  location: Discovery Park North Parking Lot, Seattle
   url: https://pack338.groups.io/g/all/viewevent?eventid=3249931
 - summary: Den Meeting - Bobcat (Pack 338)
   start: '2026-10-14T18:30:00-07:00'
@@ -36,10 +49,11 @@ events:
   end: '2026-10-14T19:30:00-07:00'
   location: Our Lady of the Lake Church - Jubilee Room
   url: https://pack338.groups.io/g/all/viewevent?eventid=3249930
-- summary: Swanson's Farm Pumpkin Trip - All-Pack (Pack 338)
-  start: 2026-10-24
-  all_day: true
-  end: 2026-10-25
+- summary: Swans Trail Farms Pumpkin Trip - All-Pack (Pack 338)
+  start: '2026-10-24T10:00:00-07:00'
+  all_day: false
+  end: '2026-10-24T13:00:00-07:00'
+  location: Swans Trail Farms, 7301 Rivershore Rd, Snohomish, WA 98290
   url: https://pack338.groups.io/g/all/viewevent?eventid=3249932
 - summary: Pumpkin Carving + Contest - All-Pack (Pack 338)
   start: '2026-10-28T18:30:00-07:00'
@@ -128,14 +142,3 @@ events:
   all_day: true
   end: 2027-01-02
   url: https://pack338.groups.io/g/all/viewevent?eventid=3249975
-- summary: Snowball Fight - All-Pack (Pack 338)
-  start: '2027-01-06T18:30:00-08:00'
-  all_day: false
-  end: '2027-01-06T19:30:00-08:00'
-  location: Our Lady of the Lake School - Multipurpose Room (MPR)
-  url: https://pack338.groups.io/g/all/viewevent?eventid=3249945
-- summary: Sledding + Snowball Fight at Hyak (Pack 338)
-  start: 2027-01-09
-  all_day: true
-  end: 2027-01-10
-  url: https://pack338.groups.io/g/all/viewevent?eventid=3249946
