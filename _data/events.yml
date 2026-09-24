@@ -2,12 +2,6 @@
 # Do not edit by hand — .github/workflows/update-events.yml overwrites it.
 # Source: https://pack338.groups.io/g/all/ics/12344147/2126990759/feed.ics
 events:
-- summary: Kickoff + Rocket Build - All-Pack (Pack 338)
-  start: '2026-09-23T18:30:00-07:00'
-  all_day: false
-  end: '2026-09-23T19:30:00-07:00'
-  location: Our Lady of the Lake School - Multipurpose Room (MPR)
-  url: https://pack338.groups.io/g/all/viewevent?eventid=3249927
 - summary: Rocket Launch (Pack 338)
   start: '2026-09-26T15:00:00-07:00'
   all_day: false
@@ -47,7 +41,7 @@ events:
   start: '2026-10-14T18:30:00-07:00'
   all_day: false
   end: '2026-10-14T19:30:00-07:00'
-  location: Our Lady of the Lake Church - Jubilee Room
+  location: Our Lady of the Lake Church - Jubilee Hall
   url: https://pack338.groups.io/g/all/viewevent?eventid=3249930
 - summary: Swans Trail Farms Pumpkin Trip - All-Pack (Pack 338)
   start: '2026-10-24T10:00:00-07:00'
@@ -59,13 +53,14 @@ events:
   start: '2026-10-28T18:30:00-07:00'
   all_day: false
   end: '2026-10-28T19:30:00-07:00'
-  location: Our Lady of the Lake School - Multipurpose Room (MPR)
+  location: Our Lady of the Lake Church - Jubilee Hall, 8900 35th Ave NE, Seattle,
+    WA 98115
   url: https://pack338.groups.io/g/all/viewevent?eventid=3249933
 - summary: Den Meeting - Citizenship (Pack 338)
   start: '2026-11-04T18:30:00-08:00'
   all_day: false
   end: '2026-11-04T19:30:00-08:00'
-  location: Our Lady of the Lake Church - Jubilee Room
+  location: Our Lady of the Lake Church - Jubilee Hall
   url: https://pack338.groups.io/g/all/viewevent?eventid=3249934
 - summary: Wreath Orders Due (Pack 338)
   start: 2026-11-09
@@ -76,7 +71,7 @@ events:
   start: '2026-11-10T18:30:00-08:00'
   all_day: false
   end: '2026-11-10T19:30:00-08:00'
-  location: Our Lady of the Lake Church - Jubilee Room
+  location: Our Lady of the Lake Church - Jubilee Hall
   url: https://pack338.groups.io/g/all/viewevent?eventid=3249937
 - summary: Veterans Day - SPS No School
   start: 2026-11-11
@@ -113,7 +108,7 @@ events:
   start: '2026-12-02T18:30:00-08:00'
   all_day: false
   end: '2026-12-02T19:30:00-08:00'
-  location: Our Lady of the Lake Church - Jubilee Room
+  location: Our Lady of the Lake Church - Jubilee Hall
   url: https://pack338.groups.io/g/all/viewevent?eventid=3249940
 - summary: Museum of Flight + Wreath Pick-Up - All-Pack Outing (Pack 338)
   start: 2026-12-05
@@ -124,7 +119,7 @@ events:
   start: '2026-12-09T18:30:00-08:00'
   all_day: false
   end: '2026-12-09T19:30:00-08:00'
-  location: Our Lady of the Lake Church - Jubilee Room
+  location: Our Lady of the Lake Church - Jubilee Hall
   url: https://pack338.groups.io/g/all/viewevent?eventid=3249941
 - summary: Ornament-Making - All-Pack (Pack 338)
   start: '2026-12-16T18:30:00-08:00'
@@ -142,3 +137,9 @@ events:
   all_day: true
   end: 2027-01-02
   url: https://pack338.groups.io/g/all/viewevent?eventid=3249975
+- summary: Snowball Fight - All-Pack (Pack 338)
+  start: '2027-01-06T18:30:00-08:00'
+  all_day: false
+  end: '2027-01-06T19:30:00-08:00'
+  location: Our Lady of the Lake School - Multipurpose Room (MPR)
+  url: https://pack338.groups.io/g/all/viewevent?eventid=3249945
