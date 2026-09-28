@@ -2,18 +2,6 @@
 # Do not edit by hand — .github/workflows/update-events.yml overwrites it.
 # Source: https://pack338.groups.io/g/all/ics/12344147/2126990759/feed.ics
 events:
-- summary: New Parent Orientation + Office Hours (Pack 338)
-  start: '2026-09-27T19:30:00-07:00'
-  all_day: false
-  end: '2026-09-27T20:00:00-07:00'
-  location: Zoom - https://binti.zoom.us/j/3303188382
-  url: https://pack338.groups.io/g/all/viewevent?eventid=3277697
-- summary: Leadership Meeting (Pack 338)
-  start: '2026-09-27T20:00:00-07:00'
-  all_day: false
-  end: '2026-09-27T21:00:00-07:00'
-  location: Zoom - https://binti.zoom.us/j/3303188382
-  url: https://pack338.groups.io/g/all/viewevent?eventid=3277698
 - summary: Den Meeting - Bobcat (Pack 338)
   start: '2026-10-07T18:30:00-07:00'
   all_day: false
@@ -142,3 +130,14 @@ events:
   all_day: true
   end: 2027-01-10
   url: https://pack338.groups.io/g/all/viewevent?eventid=3249946
+- summary: Den Meeting - Personal Safety (Pack 338)
+  start: '2027-01-13T18:30:00-08:00'
+  all_day: false
+  end: '2027-01-13T19:30:00-08:00'
+  location: Our Lady of the Lake Church - Jubilee Hall
+  url: https://pack338.groups.io/g/all/viewevent?eventid=3249947
+- summary: MLK Jr. Day - SPS No School
+  start: 2027-01-18
+  all_day: true
+  end: 2027-01-19
+  url: https://pack338.groups.io/g/all/viewevent?eventid=3249976
