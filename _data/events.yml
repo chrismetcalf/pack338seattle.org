@@ -2,11 +2,6 @@
 # Do not edit by hand — .github/workflows/update-events.yml overwrites it.
 # Source: https://pack338.groups.io/g/all/ics/12344147/2126990759/feed.ics
 events:
-- summary: SPS No School - State In-Service Day
-  start: 2026-10-09
-  all_day: true
-  end: 2026-10-10
-  url: https://pack338.groups.io/g/all/viewevent?eventid=3249971
 - summary: Discovery Park Hike to the Lighthouse (Pack 338)
   start: '2026-10-10T11:00:00-07:00'
   all_day: false
@@ -141,3 +136,8 @@ events:
   end: '2027-01-20T19:30:00-08:00'
   location: Our Lady of the Lake Church - Jubilee Hall
   url: https://pack338.groups.io/g/all/viewevent?eventid=3249948
+- summary: Fire Station Tour + Outdoor Cooking (Pack 338)
+  start: 2027-01-23
+  all_day: true
+  end: 2027-01-24
+  url: https://pack338.groups.io/g/all/viewevent?eventid=3249949
