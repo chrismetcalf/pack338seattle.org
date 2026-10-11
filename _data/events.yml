@@ -2,12 +2,6 @@
 # Do not edit by hand — .github/workflows/update-events.yml overwrites it.
 # Source: https://pack338.groups.io/g/all/ics/12344147/2126990759/feed.ics
 events:
-- summary: Discovery Park Hike to the Lighthouse (Pack 338)
-  start: '2026-10-10T11:00:00-07:00'
-  all_day: false
-  end: '2026-10-10T13:30:00-07:00'
-  location: Discovery Park North Parking Lot, Seattle
-  url: https://pack338.groups.io/g/all/viewevent?eventid=3249931
 - summary: Den Meeting - Bobcat (Pack 338)
   start: '2026-10-14T18:30:00-07:00'
   all_day: false
@@ -141,3 +135,8 @@ events:
   all_day: true
   end: 2027-01-24
   url: https://pack338.groups.io/g/all/viewevent?eventid=3249949
+- summary: SPS No School - Day Between Semesters
+  start: 2027-01-28
+  all_day: true
+  end: 2027-01-29
+  url: https://pack338.groups.io/g/all/viewevent?eventid=3249977
