@@ -2,12 +2,6 @@
 # Do not edit by hand — .github/workflows/update-events.yml overwrites it.
 # Source: https://pack338.groups.io/g/all/ics/12344147/2126990759/feed.ics
 events:
-- summary: Swans Trail Farms Pumpkin Trip - All-Pack (Pack 338)
-  start: '2026-10-24T10:00:00-07:00'
-  all_day: false
-  end: '2026-10-24T13:00:00-07:00'
-  location: Swans Trail Farms, 7301 Rivershore Rd, Snohomish, WA 98290
-  url: https://pack338.groups.io/g/all/viewevent?eventid=3249932
 - summary: Pumpkin Carving + Contest - All-Pack (Pack 338)
   start: '2026-10-28T18:30:00-07:00'
   all_day: false
@@ -140,3 +134,8 @@ events:
   end: '2027-02-03T19:30:00-08:00'
   location: Our Lady of the Lake Church - Jubilee Hall
   url: https://pack338.groups.io/g/all/viewevent?eventid=3249951
+- summary: Ice Skating (Pack 338)
+  start: 2027-02-06
+  all_day: true
+  end: 2027-02-07
+  url: https://pack338.groups.io/g/all/viewevent?eventid=3249950
