@@ -2,13 +2,6 @@
 # Do not edit by hand — .github/workflows/update-events.yml overwrites it.
 # Source: https://pack338.groups.io/g/all/ics/12344147/2126990759/feed.ics
 events:
-- summary: Pumpkin Carving + Contest - All-Pack (Pack 338)
-  start: '2026-10-28T18:30:00-07:00'
-  all_day: false
-  end: '2026-10-28T19:30:00-07:00'
-  location: Our Lady of the Lake Church - Jubilee Hall, 8900 35th Ave NE, Seattle,
-    WA 98115
-  url: https://pack338.groups.io/g/all/viewevent?eventid=3249933
 - summary: Den Meeting - Citizenship (Pack 338)
   start: '2026-11-04T18:30:00-08:00'
   all_day: false
@@ -141,3 +134,8 @@ events:
   all_day: true
   end: 2027-02-20
   url: https://pack338.groups.io/g/all/viewevent?eventid=3249978
+- summary: OLL Mid-Winter Break - No School
+  start: 2027-02-15
+  all_day: true
+  end: 2027-02-17
+  url: https://pack338.groups.io/g/all/viewevent?eventid=3249985
