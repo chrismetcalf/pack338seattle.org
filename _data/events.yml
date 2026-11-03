@@ -24,6 +24,12 @@ events:
   all_day: true
   end: 2026-11-12
   url: https://pack338.groups.io/g/all/viewevent?eventid=3249936
+- summary: Veteran's Day Flag Placement
+  start: '2026-11-11T10:00:00-08:00'
+  all_day: false
+  end: '2026-11-11T12:00:00-08:00'
+  location: Cavalry Cemetery (5041 35th Ave NE, Seattle, WA 98105)
+  url: https://pack338.groups.io/g/all/viewevent?eventid=3326741
 - summary: Pack Potluck - All-Pack (Pack 338)
   start: '2026-11-18T18:30:00-08:00'
   all_day: false
@@ -134,8 +140,3 @@ events:
   all_day: true
   end: 2027-02-20
   url: https://pack338.groups.io/g/all/viewevent?eventid=3249978
-- summary: OLL Mid-Winter Break - No School
-  start: 2027-02-15
-  all_day: true
-  end: 2027-02-17
-  url: https://pack338.groups.io/g/all/viewevent?eventid=3249985
