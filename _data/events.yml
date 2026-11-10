@@ -2,7 +2,7 @@
 # Do not edit by hand — .github/workflows/update-events.yml overwrites it.
 # Source: https://pack338.groups.io/g/all/ics/12344147/2126990759/feed.ics
 events:
-- summary: BWA Den Meeting - Citizenship (Pack 338)
+- summary: Bear + Arrow of Light Den Meeting - Citizenship (Pack 338)
   start: '2026-11-10T18:30:00-08:00'
   all_day: false
   end: '2026-11-10T19:30:00-08:00'
@@ -13,29 +13,50 @@ events:
   all_day: true
   end: 2026-11-12
   url: https://pack338.groups.io/g/all/viewevent?eventid=3249936
+- summary: Veterans Day - SPS No School
+  start: 2026-11-11
+  all_day: true
+  end: 2026-11-12
+  url: https://pack338.groups.io/g/all/viewevent?eventid=3333195
 - summary: Veteran's Day Flag Placement
   start: '2026-11-11T10:00:00-08:00'
   all_day: false
   end: '2026-11-11T12:00:00-08:00'
   location: Cavalry Cemetery (5041 35th Ave NE, Seattle, WA 98105)
   url: https://pack338.groups.io/g/all/viewevent?eventid=3326741
+- summary: Webelos Den Meeting - Citizenship (Pack 338)
+  start: '2026-11-11T18:30:00-08:00'
+  all_day: false
+  end: '2026-11-11T19:30:00-08:00'
+  location: Our Lady of the Lake Church - Jubilee Hall
+  url: https://pack338.groups.io/g/all/viewevent?eventid=3333194
 - summary: Pack Potluck - All-Pack (Pack 338)
   start: '2026-11-18T18:30:00-08:00'
   all_day: false
   end: '2026-11-18T19:30:00-08:00'
   location: Our Lady of the Lake School - Multipurpose Room (MPR)
   url: https://pack338.groups.io/g/all/viewevent?eventid=3249938
-- summary: Twin Falls Hike
+- summary: '"Advanced" Activity - Twin Falls Hike (Pack 338)'
   start: '2026-11-21T10:00:00-08:00'
   all_day: false
   end: '2026-11-21T13:00:00-08:00'
   location: Twin Falls Trailhead, Olallie State Park
   url: https://pack338.groups.io/g/all/viewevent?eventid=3249939
+- summary: SPS Conference Days - No School (most elem/K-8)
+  start: 2026-11-23
+  all_day: true
+  end: 2026-11-26
+  url: https://pack338.groups.io/g/all/viewevent?eventid=3333196
+- summary: Thanksgiving + Native American Heritage Day - SPS No School
+  start: 2026-11-26
+  all_day: true
+  end: 2026-11-28
+  url: https://pack338.groups.io/g/all/viewevent?eventid=3333197
 - summary: BWA Den Meeting + Wreath Pick-Up - Family & Reverence (Pack 338)
   start: '2026-12-02T18:30:00-08:00'
   all_day: false
   end: '2026-12-02T19:30:00-08:00'
-  location: Jes Bertrand's house - address sent to families by email
+  location: Jes's house - address sent to families by email
   url: https://pack338.groups.io/g/all/viewevent?eventid=3249940
 - summary: Adventure TBD - All-Pack Weekend Activity (Pack 338)
   start: 2026-12-05
@@ -119,23 +140,3 @@ events:
   end: '2027-02-10T19:30:00-08:00'
   location: Our Lady of the Lake School - Multipurpose Room (MPR)
   url: https://pack338.groups.io/g/all/viewevent?eventid=3249952
-- summary: ASB Mid-Winter Break - No School
-  start: 2027-02-12
-  all_day: true
-  end: 2027-02-17
-  url: https://pack338.groups.io/g/all/viewevent?eventid=3249988
-- summary: SPS Mid-Winter Break - No School
-  start: 2027-02-15
-  all_day: true
-  end: 2027-02-20
-  url: https://pack338.groups.io/g/all/viewevent?eventid=3249978
-- summary: OLL Mid-Winter Break - No School
-  start: 2027-02-15
-  all_day: true
-  end: 2027-02-17
-  url: https://pack338.groups.io/g/all/viewevent?eventid=3249985
-- summary: Winter Camp - Pack Campout (Pack 338)
-  start: 2027-02-20
-  all_day: true
-  end: 2027-02-22
-  url: https://pack338.groups.io/g/all/viewevent?eventid=3249953
