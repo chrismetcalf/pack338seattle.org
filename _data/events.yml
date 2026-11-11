@@ -2,28 +2,6 @@
 # Do not edit by hand — .github/workflows/update-events.yml overwrites it.
 # Source: https://pack338.groups.io/g/all/ics/12344147/2126990759/feed.ics
 events:
-- summary: Bear + Arrow of Light Den Meeting - Citizenship (Pack 338)
-  start: '2026-11-10T18:30:00-08:00'
-  all_day: false
-  end: '2026-11-10T19:30:00-08:00'
-  location: Our Lady of the Lake Church - Jubilee Hall
-  url: https://pack338.groups.io/g/all/viewevent?eventid=3249937
-- summary: Veterans Day Flag Placement - All-Pack Field Trip (Pack 338)
-  start: 2026-11-11
-  all_day: true
-  end: 2026-11-12
-  url: https://pack338.groups.io/g/all/viewevent?eventid=3249936
-- summary: Veterans Day - SPS No School
-  start: 2026-11-11
-  all_day: true
-  end: 2026-11-12
-  url: https://pack338.groups.io/g/all/viewevent?eventid=3333195
-- summary: Veteran's Day Flag Placement
-  start: '2026-11-11T10:00:00-08:00'
-  all_day: false
-  end: '2026-11-11T12:00:00-08:00'
-  location: Cavalry Cemetery (5041 35th Ave NE, Seattle, WA 98105)
-  url: https://pack338.groups.io/g/all/viewevent?eventid=3326741
 - summary: Webelos Den Meeting - Citizenship (Pack 338)
   start: '2026-11-11T18:30:00-08:00'
   all_day: false
@@ -140,3 +118,23 @@ events:
   end: '2027-02-10T19:30:00-08:00'
   location: Our Lady of the Lake School - Multipurpose Room (MPR)
   url: https://pack338.groups.io/g/all/viewevent?eventid=3249952
+- summary: ASB Mid-Winter Break - No School
+  start: 2027-02-12
+  all_day: true
+  end: 2027-02-17
+  url: https://pack338.groups.io/g/all/viewevent?eventid=3249988
+- summary: SPS Mid-Winter Break - No School
+  start: 2027-02-15
+  all_day: true
+  end: 2027-02-20
+  url: https://pack338.groups.io/g/all/viewevent?eventid=3249978
+- summary: OLL Mid-Winter Break - No School
+  start: 2027-02-15
+  all_day: true
+  end: 2027-02-17
+  url: https://pack338.groups.io/g/all/viewevent?eventid=3249985
+- summary: Winter Camp - Pack Campout (Pack 338)
+  start: 2027-02-20
+  all_day: true
+  end: 2027-02-22
+  url: https://pack338.groups.io/g/all/viewevent?eventid=3249953
