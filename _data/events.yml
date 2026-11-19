@@ -2,12 +2,6 @@
 # Do not edit by hand — .github/workflows/update-events.yml overwrites it.
 # Source: https://pack338.groups.io/g/all/ics/12344147/2126990759/feed.ics
 events:
-- summary: Pack Potluck - All-Pack (Pack 338)
-  start: '2026-11-18T18:30:00-08:00'
-  all_day: false
-  end: '2026-11-18T19:30:00-08:00'
-  location: Our Lady of the Lake School - Multipurpose Room (MPR)
-  url: https://pack338.groups.io/g/all/viewevent?eventid=3249938
 - summary: Twin Falls Hike (Pack 338)
   start: '2026-11-21T10:00:00-08:00'
   all_day: false
@@ -138,3 +132,9 @@ events:
   end: '2027-02-24T19:30:00-08:00'
   location: Our Lady of the Lake School - Multipurpose Room (MPR)
   url: https://pack338.groups.io/g/all/viewevent?eventid=3249954
+- summary: Den Meeting - Pinewood Derby build (Pack 338)
+  start: '2027-03-03T18:30:00-08:00'
+  all_day: false
+  end: '2027-03-03T19:30:00-08:00'
+  location: Our Lady of the Lake School - Multipurpose Room (MPR)
+  url: https://pack338.groups.io/g/all/viewevent?eventid=3249955
