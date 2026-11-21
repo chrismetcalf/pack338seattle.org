@@ -2,12 +2,6 @@
 # Do not edit by hand — .github/workflows/update-events.yml overwrites it.
 # Source: https://pack338.groups.io/g/all/ics/12344147/2126990759/feed.ics
 events:
-- summary: Twin Falls Hike (Pack 338)
-  start: '2026-11-21T10:00:00-08:00'
-  all_day: false
-  end: '2026-11-21T13:00:00-08:00'
-  location: Twin Falls Trailhead, Olallie State Park
-  url: https://pack338.groups.io/g/all/viewevent?eventid=3249939
 - summary: SPS Conference Days - No School (most elem/K-8)
   start: 2026-11-23
   all_day: true
@@ -138,3 +132,8 @@ events:
   end: '2027-03-03T19:30:00-08:00'
   location: Our Lady of the Lake School - Multipurpose Room (MPR)
   url: https://pack338.groups.io/g/all/viewevent?eventid=3249955
+- summary: Weekend Outdoor Activity - TBD (Pack 338)
+  start: 2027-03-06
+  all_day: true
+  end: 2027-03-07
+  url: https://pack338.groups.io/g/all/viewevent?eventid=3249956
